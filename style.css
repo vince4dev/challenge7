@@ -1,0 +1,211 @@
+/* FONTS ------------------------------------ */
+/* barlow-condensed-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/barlow-condensed-v13-latin-500.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-condensed-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./assets/fonts/barlow-condensed-v13-latin-600.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* VARIABLES ------------------------------------ */
+:root {
+  /* primary colors */
+  --clr-purple-50: hsl(260, 100%, 95%);
+  --clr-purple-300: hsl(264, 82%, 80%);
+  --clr-purple-500: hsl(263, 55%, 52%);
+
+  /* neutral colors */
+  --clr-grey-100: hsl(214, 17%, 92%);
+  --clr-grey-200: hsl(0, 0%, 81%);
+  --clr-grey-400: hsl(224, 10%, 45%);
+  --clr-grey-500: hsl(217, 19%, 35%);
+  --clr-dark-blue: hsl(219, 29%, 14%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 7%);
+
+  /* fonts size */
+  --fs-11: 0.6875rem;
+  --fs-13: 0.8125rem;
+  --fs-20: 1.25rem;
+
+  /* fonts weight */
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+}
+
+/* RESET ------------------------------------ */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+/* BASE ------------------------------------ */
+
+.border {
+  outline: 2px solid var(--clr-purple-300);
+}
+
+/* GENERAL ------------------------------------ */
+blockquote {
+  font-size: var(--fs-20);
+  line-height: 120%;
+  font-weight: var(--fw-semi-bold);
+}
+
+.testimonial__description {
+  font-size: var(--fs-13);
+  line-height: 140%;
+  font-weight: var(--fw-medium);
+}
+
+.testimonial__status {
+  font-size: var(--fs-11);
+  line-height: 110%;
+  font-weight: var(--fw-medium);
+}
+
+h2 {
+  font-size: var(--fs-13);
+  line-height: 110%;
+  font-weight: var(--fw-medium);
+}
+
+body {
+  background-color: #f6f5f6;
+  font-family: "Barlow Condensed", Arial, Helvetica, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-block: 4.5625rem;
+}
+
+.testinonials {
+  max-width: 19.0625rem;
+  display: grid;
+  gap: 2rem;
+
+  grid-template-areas:
+    "first"
+    "second"
+    "third"
+    "fourth"
+    "fifth";
+}
+
+.testimonial__card {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 40px 60px 50px rgb(72 85 106 / 24%);
+
+  display: grid;
+  gap: 1rem;
+}
+
+.testimonial__header {
+  display: flex;
+  gap: 1.0625rem;
+  align-items: center;
+
+  img {
+    border-radius: 100%;
+    width: 28px;
+    height: 29px;
+  }
+
+  h2 {
+    padding-bottom: 0.25rem;
+  }
+}
+
+.first-card {
+  grid-area: first;
+  background-color: var(--clr-purple-500);
+  color: var(--clr-white);
+
+  .testimonial__status,
+  .testimonial__description {
+    color: var(--clr-purple-50);
+  }
+}
+
+.second-card {
+  grid-area: second;
+  background-color: var(--clr-grey-500);
+  color: var(--clr-white);
+
+  .testimonial__status,
+  .testimonial__description {
+    color: var(--clr-grey-100);
+  }
+}
+
+.third-card {
+  grid-area: third;
+}
+
+.third-card,
+.fifth-card {
+  background-color: var(--clr-white);
+  color: var(--clr-grey-500);
+
+  .testimonial__status,
+  .testimonial__description {
+    color: var(--clr-grey-400);
+  }
+}
+
+.fourth-card {
+  grid-area: fourth;
+  background-color: var(--clr-dark-blue);
+  color: var(--clr-white);
+
+  .testimonial__status,
+  .testimonial__description {
+    color: var(--clr-grey-200);
+  }
+}
+
+.fifth-card {
+  grid-area: fifth;
+}
+
+/* TABLET ------------------------------------ */
+@media (min-width: 768px) {
+  .testinonials {
+    max-width: 40.4375rem;
+    grid-template-areas:
+      "first first"
+      "second third"
+      "fourth fourth"
+      "fifth fifth";
+  }
+}
+
+/* DESKTOP ------------------------------------ */
+@media (min-width: 1440px) {
+  .testinonials {
+    max-width: 69.625rem;
+    grid-template-areas:
+      "first first second fifth"
+      "third fourth fourth fifth";
+  }
+}
