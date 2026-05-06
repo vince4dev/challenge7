@@ -97,7 +97,7 @@ body {
   padding-block: 4.5625rem;
 }
 
-.testinonials {
+.testimonials {
   max-width: 19.0625rem;
   display: grid;
   gap: 2rem;
@@ -114,7 +114,8 @@ body {
   min-width: 100%;
   padding: 2rem;
   border-radius: 0.5rem;
-  box-shadow: 40px 60px 50px rgb(72 85 106 / 24%);
+  box-shadow: 40px 60px 50px rgba(72, 85, 106, 0.24);
+  color: var(--clr-white);
 
   display: grid;
   gap: 1rem;
@@ -124,22 +125,19 @@ body {
   display: flex;
   gap: 1.0625rem;
   align-items: center;
-
-  img {
-    border-radius: 100%;
-    width: 1.75rem;
-    height: 1.75rem;
-  }
-
-  h2 {
-    padding-bottom: 0.25rem;
-  }
+}
+.testimonial__header img {
+  border-radius: 100%;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+.testimonial__header h2 {
+  padding-bottom: 0.25rem;
 }
 
 .first-card {
   grid-area: first;
   background-color: var(--clr-purple-500);
-  color: var(--clr-white);
 
   .testimonial__status,
   .testimonial__description {
@@ -150,7 +148,6 @@ body {
 .second-card {
   grid-area: second;
   background-color: var(--clr-grey-500);
-  color: var(--clr-white);
 
   .testimonial__status,
   .testimonial__description {
@@ -176,11 +173,11 @@ body {
 .fourth-card {
   grid-area: fourth;
   background-color: var(--clr-dark-blue);
-  color: var(--clr-white);
+  color: var(--clr-grey-200);
 
   .testimonial__status,
   .testimonial__description {
-    color: var(--clr-grey-200);
+    color: var(--clr-grey-100);
   }
 }
 
@@ -190,7 +187,7 @@ body {
 
 /* TABLET ------------------------------------ */
 @media (min-width: 768px) {
-  .testinonials {
+  .testimonials {
     max-width: 40.4375rem;
     min-height: auto;
     grid-template-areas:
@@ -208,7 +205,7 @@ body {
 
 /* DESKTOP ------------------------------------ */
 @media (min-width: 1440px) {
-  .testinonials {
+  .testimonials {
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     max-width: 69.625rem;
