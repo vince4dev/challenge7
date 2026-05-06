@@ -138,21 +138,19 @@ body {
 .first-card {
   grid-area: first;
   background-color: var(--clr-purple-500);
-
-  .testimonial__status,
-  .testimonial__description {
-    color: var(--clr-purple-50);
-  }
+}
+.first-card .testimonial__status,
+.first-card .testimonial__description {
+  color: var(--clr-purple-50);
 }
 
 .second-card {
   grid-area: second;
   background-color: var(--clr-grey-500);
-
-  .testimonial__status,
-  .testimonial__description {
-    color: var(--clr-grey-100);
-  }
+}
+.second-card .testimonial__status,
+.second-card .testimonial__description {
+  color: var(--clr-grey-100);
 }
 
 .third-card {
@@ -163,22 +161,22 @@ body {
 .fifth-card {
   background-color: var(--clr-white);
   color: var(--clr-grey-500);
-
-  .testimonial__status,
-  .testimonial__description {
-    color: var(--clr-grey-400);
-  }
+}
+.third-card .testimonial__status,
+.third-card .testimonial__description,
+.fifth-card .testimonial__status,
+.fifth-card .testimonial__description {
+  color: var(--clr-grey-400);
 }
 
 .fourth-card {
   grid-area: fourth;
   background-color: var(--clr-dark-blue);
   color: var(--clr-grey-200);
-
-  .testimonial__status,
-  .testimonial__description {
-    color: var(--clr-grey-100);
-  }
+}
+.fourth-card .testimonial__status,
+.fourth-card .testimonial__description {
+  color: var(--clr-grey-100);
 }
 
 .fifth-card {
