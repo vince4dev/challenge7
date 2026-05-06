@@ -1,20 +1,20 @@
 /* FONTS ------------------------------------ */
-/* barlow-condensed-500 - latin */
+/* barlow-semi-condensed-500 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Barlow Condensed";
+  font-family: "Barlow Semi Condensed";
   font-style: normal;
   font-weight: 500;
-  src: url("./assets/fonts/barlow-condensed-v13-latin-500.woff2")
+  src: url("./assets/fonts/barlow-semi-condensed-v16-latin-500.woff2")
     format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-/* barlow-condensed-600 - latin */
+/* barlow-semi-condensed-600 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Barlow Condensed";
+  font-family: "Barlow Semi Condensed";
   font-style: normal;
   font-weight: 600;
-  src: url("./assets/fonts/barlow-condensed-v13-latin-600.woff2")
+  src: url("./assets/fonts/barlow-semi-condensed-v16-latin-600.woff2")
     format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -88,7 +88,7 @@ h2 {
 
 body {
   background-color: #f6f5f6;
-  font-family: "Barlow Condensed", Arial, Helvetica, sans-serif;
+  font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
 
   display: flex;
   justify-content: center;
@@ -111,7 +111,7 @@ body {
 }
 
 .testimonial__card {
-  width: 100%;
+  min-width: 100%;
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 40px 60px 50px rgb(72 85 106 / 24%);
@@ -127,8 +127,8 @@ body {
 
   img {
     border-radius: 100%;
-    width: 28px;
-    height: 29px;
+    width: 1.75rem;
+    height: 1.75rem;
   }
 
   h2 {
@@ -192,17 +192,25 @@ body {
 @media (min-width: 768px) {
   .testinonials {
     max-width: 40.4375rem;
+    min-height: auto;
     grid-template-areas:
-      "first first"
+      "first  first"
       "second third"
       "fourth fourth"
-      "fifth fifth";
+      "fifth  fifth";
+  }
+  .first-card {
+    background-image: url("./assets/images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top 0 left 23.5rem;
   }
 }
 
 /* DESKTOP ------------------------------------ */
 @media (min-width: 1440px) {
   .testinonials {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     max-width: 69.625rem;
     grid-template-areas:
       "first first second fifth"
